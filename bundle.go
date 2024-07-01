@@ -48,9 +48,9 @@ func validateFlutterURL(bundleURL string) error {
 	}
 
 	const storageHost = "storage.googleapis.com"
-	if flutterURL.Host != storageHost {
+	/*if flutterURL.Host != storageHost {
 		return fmt.Errorf("invalid hostname, expecting %s", storageHost)
-	}
+	}*/
 
 	const sep = "/"
 	pathParts := strings.Split(strings.TrimLeft(flutterURL.EscapedPath(), sep), sep)
