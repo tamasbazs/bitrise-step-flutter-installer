@@ -175,7 +175,7 @@ to use the latest version from channel %s.`, requiredVersion)
 		fmt.Println()
 		log.Infof("Downloading and unarchiving Flutter from installation bundle: %s", cfg.BundleURL)
 
-		if err := downloadAndUnarchiveBundle(cfg.BundleURL, sdkPathParent); err != nil {
+		if err := downloadAndUnarchiveBundle(cfg.BundleURL, sdkPathParent,cfg.ValidateFlutterURL); err != nil {
 			return fmt.Errorf("failed to download and unarchive bundle, error: %s", err)
 		}
 	} else {
