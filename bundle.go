@@ -37,7 +37,7 @@ func downloadAndUnarchiveBundle(bundleURL, targetDir string) error {
 /*
 Expecting URL similar to: https://storage.googleapis.com/flutter_infra/releases/beta/macos/flutter_macos_v1.6.3-beta.zip
 */
-func validateFlutterURL(bundleURL string) error {
+func validateFlutterURL(bundleURL string, validateURL bool) error {
 	flutterURL, err := url.Parse(bundleURL)
 	if err != nil {
 		return err
