@@ -18,8 +18,8 @@ import (
 	"github.com/bitrise-io/go-utils/retry"
 )
 
-func downloadAndUnarchiveBundle(bundleURL, targetDir string) error {
-	if err := validateFlutterURL(bundleURL); err != nil {
+func downloadAndUnarchiveBundle(bundleURL, targetDir string, validateURL bool) error {
+	if err := validateFlutterURL(bundleURL,validateURL); err != nil {
 		return err
 	}
 
