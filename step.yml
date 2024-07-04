@@ -101,3 +101,12 @@ inputs:
     value_options:
     - "false"
     - "true"
+- validate_flutter_url: "false"
+  opts:
+    category: Debug
+    title: Should validate Flutter URL
+    summary: If checked the URL of the Flutter bundle is validated
+    description: If checked the URL of the Flutter bundle is validated
+    value_options:
+    - "false"
+    - "true"
