@@ -56,6 +56,7 @@ type Input struct {
 	IsUpdate  bool   `env:"is_update,required"`
 	BundleURL string `env:"installation_bundle_url"`
 	IsDebug   bool   `env:"is_debug,required"`
+	ValidateFlutterURL   bool   `env:"validate_flutter_url,required"`
 }
 
 type Config struct {
