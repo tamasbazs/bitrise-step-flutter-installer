@@ -65,8 +65,10 @@ func validateFlutterURL(bundleURL string) error {
 			}
 		}
 	}
-	if !foundMatch {
-		return fmt.Errorf("invalid path, expecting it to begin with one of: %v", flutterPaths)
+	if validateURL {
+		if !foundMatch {
+			return fmt.Errorf("invalid path, expecting it to begin with one of: %v", flutterPaths)
+		}
 	}
 	return nil
 }
